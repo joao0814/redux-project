@@ -1,11 +1,11 @@
 import styles from './Navbar.module.scss';
 import {ReactComponent as Logo} from '../../assets/logo.svg';
 
-export default function Navbar() {
+export default function Navbar({children}) {
   return (
     <nav className={styles.nav}>
       <Logo className={styles.logo}/>
-      <h1>Navbar</h1>
+      <div>{children}</div>
     </nav>
   );
 }

@@ -7,9 +7,11 @@
   grid-template-areas: 'logo links busca icones';
   height: 100px;
   padding: 0 120px;
-  position: absolute;
+  position: fixed;
+  top: 0;
   width: 100vw;
   z-index: 1;
+  background-color: #000;
 
   @media(max-width: $tablet) {
     grid-template-areas:
