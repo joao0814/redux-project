@@ -3,6 +3,7 @@ import { ReactComponent as Logo } from "../../assets/logo.svg";
 import classNames from "classnames";
 import { useLocation } from "react-router-dom";
 import { RiShoppingCart2Line, RiShoppingCartFill } from "react-icons/ri";
+import Search from "components/Search";
 
 export default function Navbar({ children }) {
   const location = useLocation();
@@ -27,7 +28,9 @@ export default function Navbar({ children }) {
           </a>
         </div>
       </div>
-      <div className={styles.busca}>opa</div>
+      <div className={styles.busca}>
+        <Search />
+      </div>
       <div className={styles.icone}>
         <a href="/carrinho">
           {location.pathname === "/carrinho" ? (
