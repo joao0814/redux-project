@@ -1,3 +1,4 @@
+import DefaultPage from "components/DefaultPage";
 import Navbar from "components/Navbar";
 import Home from "pages/Home";
 import { Routes, Route } from "react-router-dom";
@@ -7,7 +8,9 @@ export default function Rotas() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<DefaultPage />}>
+          <Route index element={<Home />} />
+        </Route>
       </Routes>
     </>
   );
