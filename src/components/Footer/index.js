@@ -3,7 +3,7 @@ import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const iconProps = {
   color: "white",
-  size: 24,
+  size: 25,
   "aria-label": "Social media icon",
 };
 
