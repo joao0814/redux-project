@@ -10,6 +10,7 @@ import escritorioHeader from "assets/categorias/header/escritorio.png";
 import jogosHeader from "assets/categorias/header/jogos.png";
 import somHeader from "assets/categorias/header/som.png";
 
+
 const initialState = [
   {
     nome: "Eletrônicos",
