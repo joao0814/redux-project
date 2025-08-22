@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 
 export default function Home() {
   const navigate = useNavigate();
-
   const categorias = useSelector((state) => state.categorias);
 
   return (
@@ -18,23 +17,25 @@ export default function Home() {
         imagem={relogio}
         className={styles.header}
       />
-      <div className={styles.categorias}>
-        <div className={styles["categorias-title"]}>
+      <section className={styles.categorias}>
+        <header className={styles.categoriasTitle}>
           <h1>Categorias</h1>
-        </div>
-        <div className={styles["categorias-container"]}>
-          {categorias.map((categoria, index) => (
-            <div
-              key={index}
+        </header>
+        <div className={styles.categoriasContainer}>
+          {categorias.map((categoria) => (
+            <button
+              key={categoria.id}
+              type="button"
+              className={styles.categoriaCard}
               onClick={() => navigate(`/categoria/${categoria.id}`)}
             >
               <img src={categoria.thumbnail} alt={categoria.nome} />
               <h2>{categoria.nome}</h2>
               <p>{categoria.descricao}</p>
-            </div>
+            </button>
           ))}
         </div>
-      </div>
+      </section>
     </div>
   );
 }
