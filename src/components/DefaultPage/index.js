@@ -1,16 +1,17 @@
+import React from "react";
 import Navbar from "components/Navbar";
-import style from "./DefaultPage.module.scss";
-import { Outlet } from "react-router-dom";
 import Footer from "components/Footer";
+import { Outlet } from "react-router-dom";
+import styles from "./DefaultPage.module.scss";
 
-export default function DefaultPage() {
-  return (
-    <div className={style.container}>
-      <Navbar />
-      <div className={style["container-outlet"]}>
-        <Outlet />
-      </div>
-      <Footer />
-    </div>
-  );
-}
+const DefaultPage = () => (
+  <div className={styles.container}>
+    <Navbar />
+    <main>
+      <Outlet />
+    </main>
+    <Footer />
+  </div>
+);
+
+export default DefaultPage;
