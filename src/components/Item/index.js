@@ -33,6 +33,7 @@ export default function Item(props) {
                 {...iconeProps}
                 color="#ff0000"
                 className={styles["item-acao"]}
+                onClick={resolverFavorito}
               />
             ) : (
               <AiOutlineHeart
@@ -45,7 +46,6 @@ export default function Item(props) {
               {...iconeProps}
               color={false ? "#1875E8" : iconeProps.color}
               className={styles["item-acao"]}
-              onClick={resolverFavorito}
             />
           </div>
         </div>
