@@ -1,3 +1,4 @@
+import Carrinho from "components/Carrinho";
 import DefaultPage from "components/DefaultPage";
 import Navbar from "components/Navbar";
 import Categoria from "pages/Categoria";
@@ -12,6 +13,7 @@ export default function Rotas() {
         <Route path="/" element={<DefaultPage />}>
           <Route index element={<Home />} />
           <Route path="/categoria/:nomeCategoria" element={<Categoria />} />
+          <Route path="/carrinho" element={<Carrinho />} />
         </Route>
       </Routes>
     </>
