@@ -1,39 +1,40 @@
 @import '../../styles/breakpoint';
 
+// Visual minimalista
 .header {
-  background-image: url('/assets/fundo.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 150px 120px 100px 120px;
+  background: linear-gradient(120deg, #f8fafc 0%, #e3eafc 100%);
+  /* Imagem de fundo removida para visual mais limpo */
+  padding: 100px 60px 60px 60px;
   position: relative;
-  @media(max-width: $tablet) {
-    padding-top: 250px;
-  }
-  @media(max-width: $mobile-sm) {
-    padding: 250px 50px 100px 50px;
-  }
-}
-
-.header {
+  border-radius: 32px;
+  box-shadow: 0 2px 12px rgba(64, 120, 192, 0.04);
   display: grid;
   grid-template-areas: 'texto imagem';
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
   justify-content: space-between;
+  gap: 40px;
   @media(max-width: $tablet) {
-    gap: 20px;
+    padding: 80px 24px 40px 24px;
     grid-template-rows: auto 1fr;
     grid-template-columns: 1fr;
     grid-template-areas: 'texto' 'imagem';
     text-align: center;
   }
   &-texto {
-    color: white;
+  color: #2a3950;
     grid-area: texto;
     h1 {
-      font-size: 60px;
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 16px;
+      letter-spacing: 1px;
     }
     h2 {
-      font-size: 25px;
+      font-size: 22px;
+      font-weight: 400;
+  color: #6c7a89;
+      margin-bottom: 0;
     }
   }
   &-button {
@@ -43,14 +44,23 @@
     }
   }
   &-imagem {
+    padding-top: 20px;
     align-self: center;
     grid-area: imagem;
     justify-self: center;
     overflow: hidden;
-    max-width: 700px;
+    max-width: 320px;
+    min-width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     img {
-      border-radius: 144px;
-      width: 100%;
+      border-radius: 50%;
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+  box-shadow: 0 2px 12px rgba(64, 120, 192, 0.08);
+  background: #e3eafc;
     }
   }
 }

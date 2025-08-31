@@ -8,29 +8,91 @@
   flex-direction: column;
   padding: 0 100px 0;
   transform: translateY(-250px);
-  h1 {
-    color: white;
-    font-size: 40px;
+  // Variáveis visuais
+  $home-bg: linear-gradient(120deg, #EFF9FF 0%, #fff 100%);
+  $card-bg: #fff;
+  $card-radius: 32px;
+  $card-shadow: 0 4px 24px rgba(24, 117, 232, 0.08);
+  $card-shadow-hover: 0 8px 32px rgba(24, 117, 232, 0.16);
+  $card-border: 2px solid #eaf0fa;
+  $primary: #041833;
+  $accent: #1875E8;
+
+  .header {
+    padding-bottom: 180px;
+    background: linear-gradient(90deg, #232946 0%, #0f172a 100%);
+    box-shadow: $card-shadow;
+    border-radius: $card-radius;
   }
-  &-container {
+
+  .categorias {
+    align-items: center;
     display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    justify-content: center;
-    top: calc(100% - 150px);
-    width: 90%;
-    > div {
-      align-items: center;
-      cursor: pointer;
+    flex-direction: column;
+    padding: 0 60px 0;
+    margin-top: -120px;
+    background: $home-bg;
+    border-radius: $card-radius;
+    box-shadow: $card-shadow;
+    min-height: 400px;
+
+    h1 {
+      color: $primary;
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 32px;
+      text-shadow: 0 2px 8px rgba(24, 117, 232, 0.10);
+    }
+
+    &-container {
       display: flex;
-      flex-direction: column;
-      h1 {
-        color: #041833;
-        font-size: 25px;
-      }
-      > img {
-        border-radius: 144px;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      width: 100%;
+      padding: 32px 0;
+
+      > div {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        background: $card-bg;
+        border-radius: $card-radius;
+        box-shadow: $card-shadow;
+        padding: 32px 24px;
+        border: none;
+        width: 220px;
+        min-height: 220px;
+        max-width: 220px;
+        transition: transform 0.2s, box-shadow 0.2s;
+
+        &:hover {
+          transform: translateY(-8px) scale(1.03);
+          box-shadow: $card-shadow-hover;
+        }
+
+        h1 {
+          color: $primary;
+          font-size: 20px;
+          font-weight: 600;
+          margin-top: 16px;
+          margin-bottom: 0;
+          letter-spacing: 0.5px;
+          text-align: center;
+        }
+
+        > img {
+          border-radius: 50%;
+          width: 80px;
+          height: 80px;
+          object-fit: cover;
+          box-shadow: 0 2px 8px rgba(24, 117, 232, 0.08);
+          border: none;
+          background: #f7faff;
+          margin-bottom: 12px;
+        }
       }
     }
-  }
-}
+  }}
