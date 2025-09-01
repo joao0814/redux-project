@@ -6,12 +6,13 @@
   grid-template-columns: 1fr 2fr 2fr;
   grid-template-areas: 'logo links busca icones';
   height: 100px;
-  padding: 0 120px;
+  padding: 0 40px;
   position: fixed;
   top: 0;
   width: 100vw;
   z-index: 1;
-  background-color: #0b00a1;
+  background: linear-gradient(90deg, #f8fafc 0%, #e3eafc 100%);
+  box-shadow: 0 2px 12px rgba(64, 120, 192, 0.06);
 
   @media(max-width: $tablet) {
     grid-template-areas:
@@ -25,13 +26,18 @@
   }
 
   @media(max-width: $mobile-sm) {
-    padding: 0 50px;
+    padding: 0 20px;
   }
 }
 
 .logo {
   cursor: pointer;
   grid-area: logo;
+  fill: #232946;
+  transition: fill 0.2s;
+  &:hover {
+    fill: #0f172a;
+  }
 }
 
 .links {
@@ -39,15 +45,30 @@
   display: flex;
   justify-content: flex-start;
   gap: 20px;
-
   @media(max-width: $tablet) {
     justify-self: start;
   }
 }
 
 .link {
-  color: white;
-  font-size: 22px;
+  color: #232946;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: color 0.2s, background 0.2s;
+  border-radius: 20px;
+  &:hover {
+    background: #e3eafc;
+    color: #0f172a;
+  }
+}
+
+.selected {
+  background: #dbeafe;
+  color: #0f172a;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .busca {
@@ -55,11 +76,6 @@
   display: flex;
   grid-area: busca;
   width: 100%;
-}
-
-.selected {
-  font-weight: bold;
-  text-decoration: underline;
 }
 
 .icones {
