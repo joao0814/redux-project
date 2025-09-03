@@ -1,4 +1,4 @@
-import Carrinho from "components/Carrinho";
+import Carrinho from "pages/Carrinho";
 import DefaultPage from "components/DefaultPage";
 import Navbar from "components/Navbar";
 import Categoria from "pages/Categoria";
